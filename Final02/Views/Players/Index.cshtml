@@ -29,7 +29,11 @@
                     <td>@Html.DisplayFor(x => item.PlayerName)</td>
                     <td>@Html.DisplayFor(x => item.DateOfBirth)</td>
                     <td>@Html.DisplayFor(x => item.Phone)</td>
-                    <td>@Html.DisplayFor(x => item.MaritalStatus)</td>
+                   
+                    <td>
+                        <input type="checkbox" class="custom-checkbox" disabled @(item.MaritalStatus ? "checked" : "") />
+
+                    </td>
                     <td>
                         <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.PlayerId">Edit</a>
                         <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.PlayerId">Delete</a>
